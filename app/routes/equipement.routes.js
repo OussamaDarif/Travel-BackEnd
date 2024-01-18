@@ -5,7 +5,6 @@ module.exports = function (app) {
 
   var router = require("express").Router();
 
-
   // Retrieve all Equipements
   router.get("/", controller.findAllequipement);
 
