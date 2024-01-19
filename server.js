@@ -57,7 +57,7 @@ require("./app/routes/avis.routes")(app);
 require("./app/routes/paiement.routes")(app);
 
 // set port, listen for requests
-const PORT = process.env.PORT || 8090;
+const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
   console.log(`Server is running.`);
 });
@@ -73,7 +73,6 @@ function initial() {
         }
 
         console.log("add 'user' to roles collection");
-
       });
 
       new Role({
@@ -88,4 +87,8 @@ function initial() {
     }
   });
 }
+
+
+
+
 

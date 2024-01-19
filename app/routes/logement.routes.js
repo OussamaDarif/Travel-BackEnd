@@ -23,7 +23,6 @@ module.exports = function (app) {
   // update Logement
   router.put("/update/:id", [authJwt.verifyToken], controller.updateLogement);
 
-  
   // update Logement
   router.put("/updateOne/:id", [authJwt.isAuthorized], controller.updateSingleDocument);
 
