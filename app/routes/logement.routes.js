@@ -13,9 +13,9 @@ module.exports = function (app) {
   router.get("/:slug", controller.findOne);
 
 
-  router.put("/create/", [authJwt.verifyToken], controller.createLogement);
+  router.post("/create/", [authJwt.verifyToken], controller.createLogement);
 
-  router.put("/create_img/:id", [authJwt.verifyToken], controller.save_image);
+  router.post("/create_img/:id", [authJwt.verifyToken], controller.save_image);
 
   // Delet Logement
   router.delete("/delete/:id", [authJwt.verifyToken], controller.deleteLogement);

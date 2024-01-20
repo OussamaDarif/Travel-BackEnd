@@ -6,7 +6,7 @@ module.exports = function(app) {
   var router = require("express").Router();
 
 
-  router.put("/create/:id", [authJwt.verifyToken], controller.addService);
+  router.post("/create/:id", [authJwt.verifyToken], controller.addService);
 
   // Retrieve all Services
   router.get("/",[authJwt.verifyToken], controller.findAllservices);

@@ -8,7 +8,7 @@ module.exports = function (app) {
   // Retrieve all Equipements
   router.get("/", controller.findAllequipement);
 
-  router.put("/create/:id", [authJwt.verifyToken], controller.addEquipement);
+  router.post("/create/:id", [authJwt.verifyToken], controller.addEquipement);
 
   // Delet Equipement
   router.delete("/delete/:id", [authJwt.verifyToken], controller.deleteEquipement);

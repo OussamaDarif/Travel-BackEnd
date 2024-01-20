@@ -12,7 +12,7 @@ module.exports = function (app) {
   // Retrieve all Services_category
   router.get("/aggregate", controller.categoriesAggregate);
 
-  router.put("/create/", [authJwt.verifyToken], controller.addCategory);
+  router.post("/create/", [authJwt.verifyToken], controller.addCategory);
 
   // Delet Category
   router.delete("/delete/:id", [authJwt.verifyToken], controller.deleteCategory);
